@@ -1,53 +1,55 @@
 # Sorting-Method
 This repository has been created to submit in Major League Hack - MLH  Resources
 
-# Hello World Project with Dart
-
 ## Inspiration
-
-The inspiration behind this project was to create a simple yet fundamental program to get started with Dart programming. "Hello World" programs are often the first step for developers when learning a new programming language, and Dart is no exception.
+Our inspiration for the Sorting Method project stemmed from the constant need for efficient data organization and the desire to explore and implement innovative sorting algorithms.
 
 ## What it does
-
-The project is a basic "Hello World" program written in Dart. It simply prints the famous greeting message to the console when executed.
-
-```dart
-void main() {
-  print('Hello, World!');
-}
+Sorting Method is a project designed to streamline the chaos in data by providing a versatile and efficient sorting solution. It leverages advanced sorting algorithms to organize lists, offering a reliable tool for data management.
 ```
-## How we built it
+void main() {
+  // Sample list
+  List<int> myNumbers = [5, 2, 8, 1, 6];
 
-The project was built using the Dart programming language. Dart is a versatile language known for its simplicity and efficiency, making it a great choice for both beginners and experienced developers. The code was written in a simple text editor or an integrated development environment (IDE) that supports Dart.
+  // Sorting the list without using inbuilt functions
+  myNumbers = customSort(myNumbers);
+
+  // Displaying the sorted list
+  print("Original List: $myNumbers");
+}
+
+List<int> customSort(List<int> list) {
+  int n = list.length;
+
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      if (list[j] > list[j + 1]) {
+        // swapping elements if they are in the wrong order
+        int temp = list[j];
+        list[j] = list[j + 1];
+        list[j + 1] = temp;
+      }
+    }
+  }
+
+  return list;
+}
+
+```
+
+## How we built it
+The project was built using a combination of programming languages, focusing on versatility and performance. We carefully implemented various sorting algorithms and optimized the code to ensure seamless integration and fast execution.
 
 ## Challenges we ran into
-
-Despite the simplicity of the "Hello World" program, there were a few challenges we faced during the project:
-
-- Setting up the Development Environment: Configuring the development environment for Dart could be a challenge for beginners.
-
-- Syntax Errors: Dealing with syntax errors, especially for those new to Dart, was a common challenge. However, Dart's error messages are informative and helped us understand and fix the issues.
+Throughout the development process, we faced challenges such as algorithmic complexities, optimization hurdles, and integration issues. Overcoming these obstacles required teamwork, problem-solving, and a commitment to delivering a robust solution.
 
 ## Accomplishments that we're proud of
-
-- Successful Execution: Achieving a successfully executed "Hello World" program in Dart was a satisfying accomplishment.
-
-- Understanding Basics: Learning the basic syntax and structure of Dart through this simple project laid the foundation for more complex programming tasks.
+We take pride in achieving a well-optimized and effective sorting solution. Our accomplishment lies in creating a tool that not only meets but exceeds the expectations of efficiency and reliability in data sorting.
 
 ## What we learned
-Through this project, we learned:
+The project provided valuable insights into the nuances of sorting algorithms, optimization techniques, and collaborative development. We honed our skills in algorithm design, coding practices, and project management.
 
-- Dart Basics: A solid understanding of Dart's syntax, variables, and functions.
+## What's next for Sorting Method
+Looking ahead, we plan to expand the Sorting Method project by incorporating additional sorting algorithms, enhancing user interface features, and exploring integration possibilities with other applications. We aim to continuously improve and adapt to meet the evolving needs of data management and organization.
 
-- Debugging Techniques: Improved skills in debugging Dart code, thanks to resolving syntax errors encountered during development.
 
-## What's next for Hello World
-While the "Hello World" program is a basic introduction to Dart, the next steps may include:
-
-- Exploring Dart Libraries: Dive deeper into Dart's libraries and explore more advanced features.
-
-- Building Simple Applications: Progress to building more complex applications using Dart, such as web applications or command-line tools.
-
-- Learning Frameworks: Explore Dart frameworks like Flutter for building cross-platform mobile applications.
-
-This project serves as a starting point for further exploration and development in Dart programming.
